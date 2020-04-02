@@ -134,7 +134,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "18-03-2020"  //  название  // титан 
+#define CUSTOM_MACHINE_NAME "1-04-2020"  //  название  // титан 
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -1057,7 +1057,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true   // титан  false
+#define INVERT_X_DIR false   // титан  false
 #define INVERT_Y_DIR true
 #define INVERT_Z_DIR false
 
@@ -1093,8 +1093,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 270 // титан 200
-#define Y_BED_SIZE 180 // титан 200
+#define X_BED_SIZE 280 // титан 200
+#define Y_BED_SIZE 190 // титан 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1315,7 +1315,7 @@
 #define LCD_BED_LEVELING   // титан
 
 #if ENABLED(LCD_BED_LEVELING)
-  #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
+  #define MESH_EDIT_Z_STEP  0.05 // (mm) Step size while manually probing Z axis.
   #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
   //#define MESH_EDIT_MENU        // Add a menu to edit mesh points
 #endif

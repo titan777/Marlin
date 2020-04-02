@@ -1027,7 +1027,7 @@
 
   // The standard SD detect circuit reads LOW when media is inserted and HIGH when empty.
   // Enable this option and set to HIGH if your SD cards are incorrectly detected.
-  //#define SD_DETECT_STATE HIGH
+  #define SD_DETECT_STATE HIGH
 
   #define SD_FINISHED_STEPPERRELEASE true          // Disable steppers when SD Print is finished
   #define SD_FINISHED_RELEASECOMMAND "M84 X Y Z E" // You might want to keep the Z enabled so your bed stays in place.
@@ -1463,7 +1463,7 @@
   //#define BABYSTEP_WITHOUT_HOMING
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
-  #define BABYSTEP_MULTIPLICATOR_Z  1       // Babysteps are very small. Increase for faster motion.
+  #define BABYSTEP_MULTIPLICATOR_Z  5    //1  титан   // Babysteps are very small. Increase for faster motion.
   #define BABYSTEP_MULTIPLICATOR_XY 1
 
   #define DOUBLECLICK_FOR_Z_BABYSTEPPING   //титан // Double-click on the Status Screen for Z Babystepping.
@@ -1546,8 +1546,8 @@
 #if PROBE_SELECTED && !IS_KINEMATIC
   #define MIN_PROBE_EDGE_LEFT MIN_PROBE_EDGE
   #define MIN_PROBE_EDGE_RIGHT MIN_PROBE_EDGE
-  #define MIN_PROBE_EDGE_FRONT MIN_PROBE_EDGE + 10
-  #define MIN_PROBE_EDGE_BACK MIN_PROBE_EDGE
+  #define MIN_PROBE_EDGE_FRONT 40
+  #define MIN_PROBE_EDGE_BACK 10
 #endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
